@@ -1,6 +1,7 @@
 # noto-sans-mono-r0
 
-Revert lower case "r" and number "0" to early version looking.
+Revert lower case "r" and number "0" to early version looking.  
+But keep new lower case "g".
 
 <img src="https://user-images.githubusercontent.com/10773245/197983079-f3b22d3a-2ceb-4ea2-b774-f80010a8ef1e.png" width=715/>
 
