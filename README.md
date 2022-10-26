@@ -2,6 +2,8 @@
 
 Revert lower case "r" and number "0" to early version looking.
 
+<img src="https://user-images.githubusercontent.com/10773245/197983079-f3b22d3a-2ceb-4ea2-b774-f80010a8ef1e.png" width=715/>
+
 Based on new Noto Mono font "Noto Sans Mono",  
 revert lower case "r" and number "0" to early "being removed Noto Mono" looking.  
 https://github.com/googlefonts/noto-fonts/issues/1000 for more details.
