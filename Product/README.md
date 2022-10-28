@@ -33,7 +33,7 @@ And in programming, CJK is usually not important to be mono (mostly comments).
 Noto Sans Fake Mono series font is created for this situation.  
 It does look like Mono font, but technically, it's not Mono.  
 This solution allows using any of your local language fonts as English font fallback,  
-without having to modify the installed font file.
+without having to modify the installed font file.  
 The result is to utilize full wide of mono English latin and does not require CJK to be mono.
 
 ### Usage
@@ -44,7 +44,7 @@ you may need to uninstall the otf one first.
 This is because Windows only support ttf as fallback font.  
 Otherwise you get a bluescreen to fail to boot when using otf.
 
-Choose one of the demo reg file import into your registry,
+Choose one of the demo reg file import into your registry,  
 this tells Windows to use "Noto Serif CJK SC Regular" (for Mactype),  
 or "Noto Serif CJK SC Medium" (for Windows native Cleartype) as fallback font.
 
