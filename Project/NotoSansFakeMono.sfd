@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 1
 OS2_UseTypoMetrics: 0
 CreationTime: 1435678095
-ModificationTime: 1666987204
+ModificationTime: 1667567207
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -55,7 +55,7 @@ OS2StrikeYPos: 322
 OS2CapHeight: 714
 OS2XHeight: 536
 OS2Vendor: 'GOOG'
-OS2CodePages: 00000000.00000000
+OS2CodePages: 2000019f.00000000
 OS2UnicodeRanges: e00002ff.400038df.08000029.00100000
 Lookup: 1 0 0 "'aalt' Access All Alternates lookup 0" { "'aalt' Access All Alternates lookup 0 subtable"  } ['aalt' ('DFLT' <'dflt' > 'cyrl' <'SRB ' 'dflt' > 'grek' <'dflt' > 'latn' <'CAT ' 'MAH ' 'MOL ' 'NAV ' 'ROM ' 'dflt' > ) ]
 Lookup: 3 0 0 "'aalt' Access All Alternates lookup 1" { "'aalt' Access All Alternates lookup 1 subtable"  } ['aalt' ('DFLT' <'dflt' > 'cyrl' <'SRB ' 'dflt' > 'grek' <'dflt' > 'latn' <'CAT ' 'MAH ' 'MOL ' 'NAV ' 'ROM ' 'dflt' > ) ]

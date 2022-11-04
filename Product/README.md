@@ -70,12 +70,22 @@ Sometimes when using MacType, the change will not show, unless:
 
 ### Principle (Steps)
 
-Use FontForge, the opensource font edit software.  
+Use FontForge, the opensource font edit software.
+
+#### Fake Mono
+
 Select 777 (0x309) U+0309 "hookabovecomb" COMBINING HOOK ABOVE,  
 this shoule be a very rare to use char, Metrics -> Set Width to 599,  
 which others is 600, so when saving it will not considered as monospace font.  
 To a non-monospace font, Windows will not force a fallback font to be monospace.  
 By doing this we get a font that 99% time monospace just one rare char width -1.
 
-Then edit font information, rename to Noto Sans Fake Mono and add a new Unique ID,  
+#### New font name
+
+Edit font information\PS Names, rename to Noto Sans Fake Mono and add a new Unique ID,  
 to allow it install with Noto Mono at the same time.
+
+#### FontLink support
+
+Edit font information\OS/2, use click - hold shift click, and ctrl click,  
+select MS Code pages same as unmodified `Noto Mono`, or font link will not work.
