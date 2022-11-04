@@ -17,6 +17,10 @@ FakeMono: Explain in download page.
 
 Go to `Product` folder, download ttf files directly.
 
+## Customize fallback font
+
+Goto `Product` folder and check `README.md`.
+
 ## LICENSE
 
 This repository hosts "the modification process" to Google Noto Fonts.  

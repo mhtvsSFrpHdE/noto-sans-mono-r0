@@ -7,24 +7,34 @@ or your IDE supports custom fallback font, they are fine.
 
 ## FakeMono
 
-Some IDE only allows you to select only one font,  
+Some IDE only allows you to select one font,  
 if a character is not covered by this font,  
 operating system will use fallback font to draw them.  
 If you don't like the font provided by operating system,  
-you need to combine two different fonts together to create a new one,  
+people usually combine two different fonts together to create a new one,  
 and it's never a simple thing to do.
 
-Windows does support custom fallback font, but there is a limitation.
+Windows does support custom fallback font, but there are limitations.
 
-For example, in theory,  
-you can combine `Noto Sans Mono R0` and `Noto Serif CJK SC Medium` while programming,  
+### TTF only
+
+Windows [FontLink](https://learn.microsoft.com/en-us/globalization/input/font-technology) only support TTF fonts,  
+not even TTC, at least Google Noto TTC is not supported (Windows 10 22H2).
+
+If a not supported font format is used,  
+the system may bluescreen fail or show incorrect font render result.  
+Goto `Material` folder, there is a tutorial about how to convert from OTF to TTF.
+
+### Mono and Non-Mono
+
+In theory, you can combine `Noto Sans Mono R0` and `Noto Serif CJK SC Medium` while programming,  
 they look pretty beautiful in my experience.  
 However, because `Noto Sans Mono R0` is technically a Mono font,  
 you can only specify another Mono font as fallback in registry,  
 which `Noto Serif CJK SC Medium` is not a Mono font.
 
 Google Noto's `Noto Sans Mono CJK SC` is not the solution,  
-this font is challenging my tolerance.  
+this font is challenging my tolerance in aesthetic.  
 On another hand, `Noto Serif Mono CJK` is not provided yet.  
 Also, the current Mono implemented by compressing English Latin characters to 1/2 wide of CJK.  
 Such behavior is bad for programming.  
@@ -44,20 +54,26 @@ you may need to uninstall the otf one first.
 This is because Windows only support ttf as fallback font.  
 Otherwise you get a bluescreen to fail to boot when using otf.
 
-Choose one of the demo reg file import into your registry,  
-this tells Windows to use "Noto Serif CJK SC Regular" (for Mactype),  
+Choose one of the demo reg file from FontLink folder, import into your registry,  
+this can tell Windows to use "Noto Serif CJK SC Regular" (for Mactype),  
 or "Noto Serif CJK SC Medium" (for Windows native Cleartype) as fallback font.
 
 You can then edit them to another font **after** import reg file:  
-Navigate to the reg path in reg file, and find "Noto Sans Fake Mono".
+Navigate to `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontLink\SystemLink`,  
+and find "Noto Sans Fake Mono".  
+Notice that `Fake Mono`, `Fake Mono R`, `Fake Mono R0` are three different.
 
-The `136,96` stand for scaling factor which is Windows to match the size between font and its fallback.  
-So the fallback font will be smaller than usual or have bad position.  
-Microsoft YaHei use `128,96` as default value,  
-I change to 128 + 8 = 136 to get a larger size to close native looking.
+The `136,96` is used to match the size between font and its fallback.  
+`128,96` is default value, imagine 128 is the fallback font size, adjust it as needed.  
+For example, when use `Noto Sans Fake Mono` with `Noto Serif CJK SC Medium`,  
+I change to 128 + 8 = 136 to get a larger `Noto Serif CJK SC Medium` size to close native looking.
 
-Adjust the first number to suit your needs, do not have to adjust second number 96.  
-Each edit will take a system reboot to be valid.
+Each edit will take a logout, login to be valid.
+
+More information:
+
+- https://learn.microsoft.com/en-us/globalization/input/font-technology
+- https://shajisoft.com/shajisoft_wp/fontlink-for-cjk-on-english-windows-10 , a copy can be found in repository.
 
 ### MacType bug
 
