@@ -16,6 +16,17 @@ and it's never a simple thing to do.
 
 Windows does support custom fallback font, but there are limitations.
 
+### 22H2
+
+Start from Windows 10 22H2, FontLink no longer work on pure English system.  
+Set "Control Panel\Clocl and Region\Region\Administrative\Current language for non-Unicode programs"  
+to one of your local language for example "Chinese (Simplified, China)",  
+then FontLink work again. UI language is not necessary to change together.
+
+However, third party editor like "Notepad++" still not response to new FontLink.  
+They did work on 21H2 with same configuration.  
+Try not to upgrade to 22H2 if you hope reserve full FontLink before a better solution.
+
 ### TTF only
 
 Windows [FontLink](https://learn.microsoft.com/en-us/globalization/input/font-technology) only support TTF fonts,  
